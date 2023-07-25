@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- boostrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Gfontslinks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/static/style1.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Container Website</title>
+
+
+
+</head>
+<body>
+
+ <div class="result">
+  <div class="container1">
+    <h1>{{ prediction }}</h1>
+  </div>
+  <div class="container2", id="Recommendation_Container">
+  <p>"1. Routine: Establish a regular daily routine and stick to it. This includes consistent mealtimes, sleep schedules, and dedicated time for relaxation.
+    2. Diet: Choose warm, cooked, and nourishing foods that are grounding and easy to digest. Include cooked vegetables, whole grains, soups, and warm beverages. Minimize raw, cold, and dry foods.
+    3. Warmth: Keep yourself warm and cozy by dressing in layers, especially in colder weather. Use blankets and warm clothing to maintain a comfortable body temperature.
+    4. Routine activities: Engage in calming and grounding activities such as gentle yoga, walking in nature, and meditation. Avoid excessive stimulation and intense physical or mental exertion.
+    5. Self-care: Incorporate regular self-care practices such as warm oil massages (abhyanga) with sesame or almond oil, warm baths, and gentle self-massage with grounding oils like sesame or castor oil.
+    6. Calming environment: Create a peaceful and calm environment with soft lighting, soothing music, and warm colors. Minimize noise, clutter, and excessive sensory stimulation.
+    7. Stress management: Practice stress reduction techniques such as deep breathing exercises, meditation, and mindfulness. Engage in activities that promote relaxation and tranquility.
+    8. Stay hydrated: Drink warm or room temperature water throughout the day to maintain hydration. Herbal teas with calming herbs like chamomile or ginger can be beneficial.
+    9. Regular rest: Ensure you get adequate rest and sleep. Establish a calming bedtime routine and create a conducive sleep environment that promotes relaxation.
+    Remember that these recommendations are general in nature. For a personalized and detailed plan, it is best to consult an experienced Ayurvedic practitioner who can assess your specific imbalances and provide appropriate guidance."<p>
+  </div>
+
+ </div>
+<script>
+     var result = {{ prediction }}
+     var recommendation = document.getElementById("Recommendation_Container");
+     recommendation.innerHTML = "";
+     if (result == "Vatta") {
+  var positiveRecommendations = [
+   "1. Routine: Establish a regular daily routine and stick to it. This includes consistent mealtimes, sleep schedules, and dedicated time for relaxation.
+    2. Diet: Choose warm, cooked, and nourishing foods that are grounding and easy to digest. Include cooked vegetables, whole grains, soups, and warm beverages. Minimize raw, cold, and dry foods.
+    3. Warmth: Keep yourself warm and cozy by dressing in layers, especially in colder weather. Use blankets and warm clothing to maintain a comfortable body temperature.
+    4. Routine activities: Engage in calming and grounding activities such as gentle yoga, walking in nature, and meditation. Avoid excessive stimulation and intense physical or mental exertion.
+    5. Self-care: Incorporate regular self-care practices such as warm oil massages (abhyanga) with sesame or almond oil, warm baths, and gentle self-massage with grounding oils like sesame or castor oil.
+    6. Calming environment: Create a peaceful and calm environment with soft lighting, soothing music, and warm colors. Minimize noise, clutter, and excessive sensory stimulation.
+    7. Stress management: Practice stress reduction techniques such as deep breathing exercises, meditation, and mindfulness. Engage in activities that promote relaxation and tranquility.
+    8. Stay hydrated: Drink warm or room temperature water throughout the day to maintain hydration. Herbal teas with calming herbs like chamomile or ginger can be beneficial.
+    9. Regular rest: Ensure you get adequate rest and sleep. Establish a calming bedtime routine and create a conducive sleep environment that promotes relaxation.
+    Remember that these recommendations are general in nature. For a personalized and detailed plan, it is best to consult an experienced Ayurvedic practitioner who can assess your specific imbalances and provide appropriate guidance."
+  ];
+
+  // Display the positive recommendations
+  positiveRecommendations.forEach(function(recommendation) {
+    var p = document.createElement("p");
+    p.innerText = recommendation;
+    recommendation.appendChild(p);
+  });
+} else if (result === "Pitta") {
+  var negativeRecommendations = [
+    "1. Diet: Opt for cooling and soothing foods such as fresh fruits, vegetables, whole grains, and dairy products. Avoid spicy, oily, and fried foods.
+    2. Lifestyle: Maintain a regular routine with sufficient rest and relaxation. Engage in calming activities like yoga, meditation, and gentle exercise.
+    3. Environment: Create a cool and peaceful environment with soft lighting and soothing colors. Avoid excessive heat and direct sunlight.
+    4. Stress management: Practice stress-reducing techniques such as deep breathing exercises, mindfulness, and engaging in hobbies or activities that promote relaxation.
+    5. Herbal remedies: Incorporate herbs that have a cooling effect on the body, such as coriander, fennel, and mint. Consult an Ayurvedic practitioner for personalized recommendations.
+    6. Avoid triggers: Minimize exposure to situations, substances, or activities that aggravate Pitta, such as excessive heat, intense competition, and confrontational environments.
+    7. Hydration: Stay well-hydrated by consuming cool or room temperature water throughout the day. Avoid or minimize caffeine and alcohol intake.
+    8. Self-care: Prioritize self-care practices, including gentle massages with cooling oils like coconut or sandalwood, and taking regular breaks to rest and rejuvenate.
+    It's important to note that these recommendations are general in nature. For a personalized and detailed plan, it is best to consult an experienced Ayurvedic practitioner."
+  ];
+
+  // Display the negative recommendations
+  negativeRecommendations.forEach(function(recommendation) {
+    var p = document.createElement("p");
+    p.innerText = recommendation;
+    recommendation.appendChild(p);
+  });
+} else {
+  var defaultRecommendations = [
+    "1. Diet: Focus on a light and stimulating diet. Choose foods that are warm, light, and easily digestible. Include plenty of fruits, vegetables, whole grains, spices, and legumes. Minimize heavy, oily, and sweet foods.
+    2. Exercise: Engage in regular physical activity to increase metabolism and stimulate circulation. Opt for vigorous exercises like jogging, dancing, or aerobics to counter the heaviness associated with Kapha.
+    3. Warmth and stimulation: Keep yourself warm and expose yourself to sunlight to counter the cold and damp tendencies of Kapha. Engage in activities that provide mental and physical stimulation.
+    4. Routine: Establish a consistent routine and stick to it. Regularity in sleep, meal times, and daily activities helps to balance Kapha.
+    5. Dryness: Introduce dry and warm elements into your routine. Use dry brushing techniques before bathing to stimulate the lymphatic system and promote circulation.
+    6. Spice it up: Incorporate pungent and heating spices such as ginger, black pepper, and cinnamon into your meals. These spices help to stimulate digestion and increase metabolic fire.
+    7. Avoid excessive sleep: Limit daytime sleep and aim for a moderate amount of sleep during the night. Excessive sleep can further aggravate Kapha.
+    8. Mental stimulation: Engage in intellectually stimulating activities that keep the mind active and alert. This can include reading, puzzles, learning new skills, or engaging in creative hobbies.
+    9. Emotional balance: Cultivate a positive and uplifted emotional state. Practice gratitude, engage in activities that bring joy and fulfillment, and surround yourself with positive and supportive people.
+    Remember that these recommendations are general in nature. For a personalized and detailed plan, it is best to consult an experienced Ayurvedic practitioner who can assess your specific imbalances and provide appropriate guidance."
+  ];
+
+  // Display the default recommendations
+  defaultRecommendations.forEach(function(recommendation) {
+    var p = document.createElement("p");
+    p.innerText = recommendation;
+    recommendation.appendChild(p);
+  });
+}
+</script>
+</body>
+</html>

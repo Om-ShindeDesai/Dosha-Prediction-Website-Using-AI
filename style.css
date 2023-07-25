@@ -1,0 +1,328 @@
+body{
+    background-color: rgb(234 215 225 / 52%);
+}
+
+#grid{
+    display:flex;
+    justify-content: center;
+    height:100%;
+    /* width:100%; */
+    
+    /* border:2px solid black; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    
+}
+
+
+.items{
+    margin-left:23%;
+    
+    margin-right:22%;
+    
+    margin-top:-3%;
+    
+    
+}
+#nav{
+    width:100%;
+}
+
+
+
+#title-img{
+    
+    height:230px;
+    width:790px;
+    margin-bottom:5%;
+    margin-left:165px;
+    /* box-shadow: 5px 2px 9px black; */
+    
+}
+ #title{
+    margin-left: 560px;
+    margin-bottom:180px; }
+
+#paragaph{
+    color: rgb(89, 86, 88);
+    line-height:24px;
+}
+#titleword{
+    padding-top:8%;
+    margin-left:21%;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(75, 113, 80);
+    margin-bottom:2%;
+    
+}
+.middletitle{
+    margin-left:12.2%;
+    font-size:120%;
+    
+    color:rgb(82, 112, 82);
+    /* margin-bottom:%; */
+    font-size:108%;
+
+}
+.middleparagraph{
+   
+    
+    /* margin:1%; */
+    margin-left:12.90%;
+    margin-right:12%;
+    color: rgb(101, 96, 100);
+   
+} 
+ .nav-item{
+    padding-top:1%;
+     padding-right:70px;
+     color:rgb(60, 125, 52)
+    
+}
+.nav-item1{
+    padding-top:1%;
+    padding-right:180px;
+    color:rgb(99, 169, 28)
+}   
+
+ #quiz-btn{
+    margin-top:1%;
+    margin-left:30%;
+    margin-right:30%;
+    background-color: rgba(200, 109, 158, 0.52);
+    box-shadow: 5px 5px 10px rgb(247, 194, 243);
+    margin-bottom:1%;
+    
+
+}
+
+body {
+    /* background-image: url("background.jpg"); */
+    background-color: #e1f3e1;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+
+.footer{
+ margin-top:10%;
+    background-color:
+    #676666  ;
+    height:24em;
+}
+#navbar-logo{
+    padding-left:2%;
+    /* font-size:50%; */
+    font-family: 'Montserrat', sans-serif;
+    color:#428113;
+}
+ 
+    @media screen and (max-width:800px){
+       
+       
+        .items p{
+            /* -300px */
+             margin:-300px;
+            padding-right:120%;
+            padding-top:300%;
+            margin-left:-14%;
+            padding-top:100%;
+            margin-bottom:10%; 
+            justify-content: center;
+            
+        }
+        #title-img img{
+            height:45%;
+            width:330px;
+            margin:-160px;
+            
+            padding-left:7%;
+            
+            margin-top:-9%;
+            
+        }
+        #titleword h1{
+            /* position:absolute; */
+            margin-bottom:6%;
+            margin-top:15%;
+            margin-left:7%;
+            font-size:150%;
+            
+    
+        
+        }
+        .middletitle h4{
+            /* padding:%; */
+            margin-left:0.80%;
+            font-size:90%;
+            margin-right:20%;
+           
+        }
+        .middleparagraph p{
+            margin-left:1%;
+            margin-right:-10%;
+            margin-top:4%;
+            color: rgb(83, 76, 82);
+        }
+        #btn-btn2 button {
+            margin-left:15%;
+    
+        }
+    }
+
+
+    .quiz{
+        margin: 70px;
+        padding: 20px;
+        border:2px solid #ccc;
+        /* background-color: rgba(255, 255, 255, 0.5); */
+        /* background-color: aliceblue; */
+background-color: #fff;
+        border-radius: 10px;
+        font-size: Arial, sans-serif;
+    }
+
+    @media screen and (max-width: 600px) {
+        .quiz {
+          margin: 20px;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    .container {
+        margin-bottom: 20px;
+      }
+      
+      .question {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .container form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      
+      .container label {
+        display: flex;
+        cursor: pointer;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 0.375em;
+      }
+      
+      .container  label input {
+        position: absolute;
+        left: -9999px;
+      }
+      
+      .container label input:checked + span {
+        background-color: #414181;
+        color: white;
+      }
+      
+      .container label input:checked + span:before {
+        box-shadow: inset 0 0 0 0.4375em #00005c;
+      }
+      
+      .container label span {
+        display: flex;
+        align-items: center;
+        padding: 0.375em 0.75em 0.375em 0.375em;
+        border-radius: 99em;
+        transition: 0.25s ease;
+        color: #414181;
+      }
+      
+      .container label span:hover {
+        background-color: #d6d6e5;
+      }
+      
+      .container label span:before {
+        display: flex;
+        flex-shrink: 0;
+        content: "";
+        background-color: #fff;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        margin-right: 0.375em;
+        transition: 0.25s ease;
+        box-shadow: inset 0 0 0 0.125em #00005c;
+      }
+      
+      .btn-sub {
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .codepen-button {
+        display: block;
+        cursor: pointer;
+        color: white;
+        margin: 0 auto;
+        position: relative;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 6px;
+        overflow: hidden;
+        padding: 3px;
+        isolation: isolate;
+      }
+      
+      .codepen-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400%;
+        height: 100%;
+        background: linear-gradient(
+          115deg,
+          #4fcf70,
+          #fad648,
+          #a767e5,
+          #12bcfe,
+          #44ce7b
+        );
+        background-size: 25% 100%;
+        animation: animate-background 0.75s linear infinite;
+        animation-play-state: paused;
+        transform: translateX(-5%);
+        transition: transform 0.25s ease-out;
+      }
+      
+      .codepen-button:hover::before {
+        animation-play-state: running;
+        transition-duration: 0.75s;
+        transform: translateX(0%);
+      }
+      
+      @keyframes animate-background {
+        to {
+          transform: translateX(-25%);
+        }
+      }
+      
+      .codepen-button span {
+        position: relative;
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        background: #000;
+        border-radius: 3px;
+        height: 100%;
+      }
+      
